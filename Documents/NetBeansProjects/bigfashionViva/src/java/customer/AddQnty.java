@@ -43,7 +43,6 @@ public class AddQnty extends HttpServlet {
         if (item != null) {
             if (product.getQnt()>item.getQnt()) {
                  item.setQnt(item.getQnt() + 1);
-                 product.setQnt(product.getQnt()-1);
             }           
         } 
         

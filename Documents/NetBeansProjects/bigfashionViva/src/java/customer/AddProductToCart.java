@@ -42,28 +42,15 @@ public class AddProductToCart extends HttpServlet {
             }
         }
         if (item != null) {
-            item.setQnt(item.getQnt() + 1);
+            item.setQnt(1);
         } else {
             CartItems citem = new CartItems();
             citem.setProductId(product);
             citem.setQnt(1);
             session_cart.getCartItemsCollection().add(citem);
         }
-
         Collection<CartItems> cic = session_cart.getCartItemsCollection();
-        
         resp.getWriter().print(cic.size());
-        for (CartItems cartItems : cic) {
-            //System.out.println("pid"+cartItems.getProductId());
-            System.out.println("pName:" + cartItems.getProductId().getName() + " qnty:" + cartItems.getQnt());
-        
-        }
-//        if (auth.isAuth()) {
-//            Transaction transaction = session.beginTransaction();
-//            session.save(session_cart);
-//            transaction.commit();
-//        }
-
         session.close();
     }
 

@@ -44,14 +44,10 @@ public class RemoveQnty extends HttpServlet {
         if (item != null) {
             if (1 < item.getQnt()) {
                 item.setQnt(item.getQnt() -1);
-                product.setQnt(product.getQnt() + 1);
             }
         }
 
         resp.getWriter().print(item.getQnt());
-        Transaction transaction = session.beginTransaction();
-        session.update(product);
-        transaction.commit();
         session.close();
     }
 

@@ -18,10 +18,9 @@
         <div class="qty-btn d-flex">
             <p>Qnty</p>
             <div class="quantity">
-                <span class="qty-minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                <span onclick="removeQnty(<%= item.getProductId().getId()%>)" class="qty-minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
                 <input type="number" class="qty-text" id="qty<%= item.getProductId().getId()%>" step="1" min="1" max="300" name="quantity" value="<%= item.getQnt()%>">
                 <span onclick="addQnty(<%= item.getProductId().getId()%>)" class="qty-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-
             </div>
         </div>
     </td>

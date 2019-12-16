@@ -17,3 +17,10 @@ function addQnty(pid){
 }
 
 
+function removeQnty(pid){
+     $.post("RemoveQnty", {
+         pid:pid
+     }, (data, status) => {
+        document.getElementById("qty"+pid).value = data;
+    });
+}

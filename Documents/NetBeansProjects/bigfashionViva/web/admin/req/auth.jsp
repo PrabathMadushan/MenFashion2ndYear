@@ -1,0 +1,4 @@
+<%
+HttpSession authsession = request.getSession();
+
+%>

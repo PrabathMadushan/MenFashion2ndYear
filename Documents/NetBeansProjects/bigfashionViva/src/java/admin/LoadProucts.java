@@ -1,10 +1,8 @@
 package admin;
 
-import dbmodels.Catogory;
 import dbmodels.Product;
 import hiberate.HibernateUtil;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,5 +21,4 @@ public class LoadProucts extends HttpServlet {
         req.setAttribute("plist", list);
         req.getRequestDispatcher("admin/ajx/products.jsp").include(req, resp);
     }
-
 }

@@ -22,9 +22,8 @@
             <!-- Core Style CSS -->
             <link rel="stylesheet" href="css/core-style.css">
             <link rel="stylesheet" href="style.css">
-
+            <link href="css/iziToast.css" rel="stylesheet" type="text/css"/>
         </head>
-
         <body>
             <!-- Search Wrapper Area Start -->
             <div class="search-wrapper section-padding-100">
@@ -271,6 +270,7 @@
         <!-- Plugins js -->
         <script src="js/plugins.js"></script>
         <!-- Active js -->
+        <script src="js/iziToast.js" type="text/javascript"></script>
         <script src="js/shop.js"></script>
         <script src="js/active.js"></script>
 

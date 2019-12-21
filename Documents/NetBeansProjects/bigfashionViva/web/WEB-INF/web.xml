@@ -60,6 +60,10 @@
         <servlet-name>RemoveQnty</servlet-name>
         <servlet-class>customer.RemoveQnty</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateOrder</servlet-name>
+        <servlet-class>customer.CreateOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewProduct</servlet-name>
         <url-pattern>/NewProduct</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>RemoveQnty</servlet-name>
         <url-pattern>/RemoveQnty</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateOrder</servlet-name>
+        <url-pattern>/CreateOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,7 +16,6 @@ import javax.servlet.http.HttpSession;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 public class AddProductToCart extends HttpServlet {
@@ -24,7 +23,6 @@ public class AddProductToCart extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pid = req.getParameter("pid");
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Criteria criteria = session.createCriteria(Product.class);

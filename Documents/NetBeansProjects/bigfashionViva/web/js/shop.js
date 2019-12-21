@@ -77,10 +77,34 @@ function searchProducts(page) {
 }
 
 function addtocart(id) {
+
     $.post("AddProductToCart", {
         pid: id
     }, (data, status) => {
-        document.getElementById("citemcount").innerHTML="("+data+")";
+        var x = document.getElementById("citemcount").innerHTML;
+        x = x.replace("(", "");
+        x = x.replace(")", "");
+        if (x == data) {
+            iziToast.show({
+                title: 'Cart:',
+                message: 'Product is already in cart',
+                position: 'topRight',
+                color: '', // blue, red, green, yellow
+                timeout: 1500,
+                theme: 'dark', // dark
+            });
+        } else {
+            iziToast.show({
+                title: 'Cart:',
+                message: 'Add Product to cart',
+                position: 'topRight',
+                color: '', // blue, red, green, yellow
+                timeout: 1500,
+                 theme: 'dark', // dark
+            });
+            document.getElementById("citemcount").innerHTML = "(" + data + ")";
+        }
+
     });
 }
 

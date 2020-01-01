@@ -64,6 +64,18 @@
         <servlet-name>CreateOrder</servlet-name>
         <servlet-class>customer.CreateOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Checkout</servlet-name>
+        <servlet-class>customer.Checkout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoadOrders</servlet-name>
+        <servlet-class>admin.LoadOrders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChanageOrderStatus</servlet-name>
+        <servlet-class>admin.ChanageOrderStatus</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewProduct</servlet-name>
         <url-pattern>/NewProduct</url-pattern>
@@ -128,9 +140,29 @@
         <servlet-name>CreateOrder</servlet-name>
         <url-pattern>/CreateOrder</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Checkout</servlet-name>
+        <url-pattern>/Checkout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadOrders</servlet-name>
+        <url-pattern>/LoadOrders</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChanageOrderStatus</servlet-name>
+        <url-pattern>/ChanageOrderStatus</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/notfound.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/severerror.html</location>
+    </error-page>
 </web-app>

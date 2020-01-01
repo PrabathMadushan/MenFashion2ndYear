@@ -13,6 +13,8 @@ public class CusAuth {
 
     public CusAuth() {
         session_cart = new Cart();
+        session_cart.setId((int)System.currentTimeMillis());
+        session_cart.setCustomerId(customer);
         session_cart.setCartItemsCollection(new ArrayList<>());
         auth = false;
     }
@@ -23,6 +25,7 @@ public class CusAuth {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+        session_cart.setCustomerId(customer);
     }
 
     public boolean isAuth() {

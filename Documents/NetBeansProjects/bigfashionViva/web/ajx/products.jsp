@@ -23,7 +23,7 @@
                     <div class="line"></div>
                     <p class="product-price">Rs <%= c.getPrice()%> </p>
                     <a href="product-details.jsp">
-                        <h6><%= c.getName()%> | [5]</h6>
+                        <h6><%= c.getName()%></h6>
                     </a>
                 </div>
                 <!-- Ratings & Cart -->

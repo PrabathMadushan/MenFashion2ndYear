@@ -25,6 +25,7 @@ public class RemoveQnty extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pid = req.getParameter("pid");
+        System.out.println("pid:"+pid);
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Criteria criteria = session.createCriteria(Product.class);

@@ -58,10 +58,9 @@ public class NewProduct extends HttpServlet {
                         case "qnty":
                             product.setQnt(Integer.parseInt(item.getString()));
                             break;
-
                     }
                 } else {
-                    String name = System.currentTimeMillis() + item.getName();
+                    String name = System.currentTimeMillis() + product.getName().trim();
                     File f = new File(path + "//" + name);
                     item.write(f);
 

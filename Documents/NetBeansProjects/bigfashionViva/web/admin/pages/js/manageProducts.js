@@ -35,8 +35,7 @@ function saveProduct() {
 
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
-            var response = request.responseText;
-            alert(response);
+            demo.showNotification('top', 'right', 'New Product ' + name + ' is Saved');
         } else {
 
         }

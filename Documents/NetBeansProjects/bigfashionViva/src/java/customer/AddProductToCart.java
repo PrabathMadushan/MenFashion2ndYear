@@ -26,7 +26,7 @@ public class AddProductToCart extends HttpServlet {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Criteria criteria = session.createCriteria(Product.class);
-        criteria.add(Restrictions.eq("id",Integer.parseInt(pid)));
+        criteria.add(Restrictions.eq("id", Integer.parseInt(pid)));
         Product product = (Product) criteria.uniqueResult();
         HttpSession httpSession = req.getSession();
         CusAuth auth = (CusAuth) httpSession.getAttribute(CusAuth.SESSION);
@@ -43,6 +43,8 @@ public class AddProductToCart extends HttpServlet {
             item.setQnt(1);
         } else {
             CartItems citem = new CartItems();
+            citem.setId((int) System.currentTimeMillis());
+            citem.setCartId(session_cart);
             citem.setProductId(product);
             citem.setQnt(1);
             session_cart.getCartItemsCollection().add(citem);

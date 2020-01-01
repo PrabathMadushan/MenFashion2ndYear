@@ -2,7 +2,9 @@
 <%@page import="java.util.Collection"%>
 <%
     Collection<CartItems> items = (Collection<CartItems>) request.getAttribute("citems");
+    int i = 0;
     for (CartItems item : items) {
+        i++;
 %>
 <tr>
     <td class="cart_product_img">
@@ -12,15 +14,16 @@
         <h5><%= item.getProductId().getName()%></h5>
     </td>
     <td class="price">
-        Rs <span id="price<%=item.getProductId().getId()%>"><%= item.getProductId().getPrice()%></span>
+        Rs <span id="price<%=i%>"><%= item.getProductId().getPrice()%></span>
     </td>
     <td class="qty">
         <div class="qty-btn d-flex">
             <p>Qnty</p>
             <div class="quantity">
                 <span onclick="removeQnty(<%= item.getProductId().getId()%>)" class="qty-minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                <input type="number" class="qty-text" id="qty<%= item.getProductId().getId()%>" step="1" min="1" max="300" name="quantity" value="<%= item.getQnt()%>">
+                <input type="number" class="qty-text" id="qty<%= item.getProductId().getId() %>" step="1" min="1" max="300" name="quantity" value="<%= item.getQnt()%>">
                 <span onclick="addQnty(<%= item.getProductId().getId()%>)" class="qty-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                <span  style="display: none" id="qnty<%=i%>">qty<%= item.getProductId().getId() %></span>
             </div>
         </div>
     </td>

@@ -7,7 +7,7 @@
         <link rel="icon" type="image/png" href="../assets/img/favicon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>
-            Paper Dashboard 2 by Creative Tim
+           Admin Portal
         </title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
@@ -23,20 +23,14 @@
     <body class="">
         <div class="wrapper ">
             <div class="sidebar" data-color="white" data-active-color="danger">
-                <!--
-                  Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-                -->
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                    <a href="#" class="simple-text logo-mini">
                         <div class="logo-image-small">
                             <img src="../assets/img/logo-small.png">
                         </div>
                     </a>
-                    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                        Big Fashion
-                        <!-- <div class="logo-image-big">
-                          <img src="../assets/img/logo-big.png">
-                        </div> -->
+                    <a href="#" class="simple-text logo-normal">
+                        Men Fashion
                     </a>
                 </div>
                 <div class="sidebar-wrapper">
@@ -60,25 +54,25 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./notifications.jsp">
+                            <a href="./orders.jsp">
                                 <i class="nc-icon nc-paper"></i>
                                 <p>Orders</p>
                             </a>
                         </li>
                         <li>
-                            <a href="./user.jsp">
+                            <a href="./customers.jsp">
                                 <i class="nc-icon nc-single-02"></i>
                                 <p>Customers</p>
                             </a>
                         </li>
                         <li>
-                            <a href="./tables.jsp">
+                            <a href="./settings.jsp">
                                 <i class="nc-icon nc-settings-gear-65"></i>
                                 <p>System Settings</p>
                             </a>
                         </li>
                         <li>
-                            <a href="./typography.jsp">
+                            <a href="./notification.jsp">
                                 <i class="nc-icon nc-bell-55"></i>
                                 <p>Notifications</p>
                             </a>
@@ -107,31 +101,11 @@
                             <span class="navbar-toggler-bar navbar-kebab"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                            <!--            <form>
-                                          <div class="input-group no-border">
-                                            <input type="text" value="" class="form-control" placeholder="Search...">
-                                            <div class="input-group-append">
-                                              <div class="input-group-text">
-                                                <i class="nc-icon nc-zoom-split"></i>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </form>-->
                             <ul class="navbar-nav">
-                                <!--              <li class="nav-item">
-                                                <a class="nav-link btn-magnify" href="#pablo">
-                                                  <i class="nc-icon nc-layout-11"></i>
-                                                  <p>
-                                                    <span class="d-lg-none d-md-block">Stats</span>
-                                                  </p>
-                                                </a>
-                                              </li>-->
                                 <li class="nav-item btn-rotate dropdown">
                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="nc-icon nc-settings-gear-65"></i>
-                                        <p>
-                                            <span class="d-lg-none d-md-block">Some Actions</span>
-                                        </p>
+                                       
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="#"><i class="nc-icon nc-settings"></i> System Settings</a>
@@ -139,179 +113,26 @@
                                         <a class="dropdown-item" href="#"><i class="nc-icon nc-trophy"></i> About</a>
                                     </div>
                                 </li>
-                                <!--              <li class="nav-item">
-                                                <a class="nav-link btn-rotate" href="#pablo">
-                                                  <i class="nc-icon nc-settings-gear-65"></i>
-                                                  <p>
-                                                    <span class="d-lg-none d-md-block">Account</span>
-                                                  </p>
-                                                </a>
-                                              </li>-->
+
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <!-- End Navbar -->
-                <!-- <div class="panel-header panel-header-lg">
-          
-            <canvas id="bigDashboardChart"></canvas>
-          
-          
-          </div> -->
                 <div class="content">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title"> Available Products In Store</h4>
-                        </div>
-                        <div class="card-body">
-                            <!--class="table-responsive"-->
-                            <div>
-                                <table class="table" >
-                                    <thead class=" text-primary">
-                                        <tr><th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                description
-                                            </th>
-                                            <th>
-                                                price
-                                            </th>
-                                            <th >
-                                                availability
-                                            </th>
-                                            <th >
-                                                category
-                                            </th>
-                                            <th>
-                                                size
-                                            </th>
-                                            <th >
-                                                color
-                                            </th>
-                                            <th class="text-center">
-                                                action
-                                            </th>
-                                        </tr></thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Rs.2500
-                                            </td>
-                                            <td>
-                                                80
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                large
-                                            </td>
-                                            <td>
-                                                black
-                                            </td>
-                                            <td  class="text-center">
-                                                <button class="btn btn-primary btn-sm">Add</button>
-                                                <button class="btn btn-danger btn-sm">Remove</button>
-                                                <button class="btn btn-dark btn-sm">Images</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Rs.2500
-                                            </td>
-                                            <td>
-                                                80
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                large
-                                            </td>
-                                            <td>
-                                                black
-                                            </td>
-                                            <td  class="text-center">
-                                                <button class="btn btn-primary btn-sm">Add</button>
-                                                <button class="btn btn-danger btn-sm">Remove</button>
-                                                <button class="btn btn-dark btn-sm">Images</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Rs.2500
-                                            </td>
-                                            <td>
-                                                80
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                large
-                                            </td>
-                                            <td>
-                                                black
-                                            </td>
-                                            <td  class="text-center">
-                                                <button class="btn btn-primary btn-sm">Add</button>
-                                                <button class="btn btn-danger btn-sm">Remove</button>
-                                                <button class="btn btn-dark btn-sm">Images</button>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body text-right">
-                             <button class="btn btn-primary">Add New Product</button>
-                        </div>
-                    </div>
+                  
                 </div>
                 <footer class="footer footer-black  footer-white ">
                     <div class="container-fluid">
                         <div class="row">
                             <nav class="footer-nav">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                                    </li>
-                                </ul>
+                               
                             </nav>
                             <div class="credits ml-auto">
                                 <span class="copyright">
                                     ©
                                     <script>
                                         document.write(new Date().getFullYear())
-                                    </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                                    </script> Created by <i class="fa fa-heart heart"></i> Prabath Madushan
                                 </span>
                             </div>
                         </div>
@@ -334,12 +155,6 @@
         <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
         <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
         <script src="../assets/demo/demo.js"></script>
-        <script>
-                                        $(document).ready(function () {
-                                            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-                                            demo.initChartsPages();
-                                        });
-        </script>
     </body>
 
 </html>

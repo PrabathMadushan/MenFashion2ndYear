@@ -1,4 +1,12 @@
+<%@page import="customer.other.CusAuth"%>
 <jsp:include page="inc/authCheck.jsp"></jsp:include>
+<%
+    CusAuth auth = (CusAuth) session.getAttribute(CusAuth.SESSION);
+    if (auth.isAuth()) {
+        response.sendRedirect("index.jsp");
+    }
+
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,29 +62,34 @@
             }
         </style>
     </head>
-    
+
     <body>
 
-        
+
         <div class="login-wraper col-md-4">
             <div class="form-group btnw2">
                 <i class="fa fa-anchor"></i>    
-            <h2>Men Fashion</h2>
-            <h5>LOGIN</h5>
-        </div>
+                <h2>Men Fashion</h2>
+                <h5>LOGIN</h5>
+            </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="Email" >
+                <input id="email" type="email" placeholder="Email" >
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="email" placeholder="Email" >
+                <input id="password" type="password" placeholder="Password" >
             </div>
+            <div class="form-group">
+                <label>Don't have Account.Please <a href="register.jsp">Register..!</a></label>
+            </div>
+
             <div class="form-group btnw">
-                <button class="btn mbtn" >Login</button>
+                <button onclick="login()" class="btn mbtn" >Login</button>
             </div>
         </div>
-
+        <script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
     </body>
 
 </html>

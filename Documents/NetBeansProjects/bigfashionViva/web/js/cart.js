@@ -26,29 +26,36 @@ function removeQnty(pid) {
         document.getElementById("qty" + pid).value = data;
         calcSubTotal();
     });
-
-
-
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            alert(xhr.responseText);
-        }
-    };
-    xhr.open("post", "RemoveQnty", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send("id=" + pid);
 }
 
 
 function calcSubTotal() {
     var x = document.getElementById("tblcart").rows.length - 1;
     var total = 0;
-    for (i = 1; i <= x; i++) {
+    for (var i = 1; i <= x; i++) {
         var price = document.getElementById("price" + i).innerHTML;
-        var qnt = document.getElementById("qty" + i).value;
+        var qnt = document.getElementById(document.getElementById("qnty" + i).innerHTML).value;
         total += (price * qnt);
-        console.log(price + " x " + qnt + " = " + (price * qnt))
     }
     document.getElementById("total").innerHTML = total;
+}
+
+function chackOut() {
+    $.post("Checkout", null, (data, status) => {
+        if (data === 'false') {
+            window.location.replace("login.jsp");
+        } else {
+            iziToast.show({
+                title: 'Checkout:',
+                message: 'Cart items are cheked out',
+                position: 'topRight',
+                color: '', // blue, red, green, yellow
+                timeout: 1500,
+                theme: 'dark', // dark
+                onClosed: function () {
+                     window.location.replace("shop.jsp");
+                }
+            });
+        }
+    });
 }

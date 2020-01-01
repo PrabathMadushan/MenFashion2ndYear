@@ -12,7 +12,7 @@
         <h5><%= item.getProductId().getName()%></h5>
     </td>
     <td class="price">
-        <span>Rs <%= item.getProductId().getPrice()%></span>
+        Rs <span id="price<%=item.getProductId().getId()%>"><%= item.getProductId().getPrice()%></span>
     </td>
     <td class="qty">
         <div class="qty-btn d-flex">

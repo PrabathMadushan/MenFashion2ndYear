@@ -3,6 +3,8 @@ $(document).ready(() => {
     loadProducts()
 });
 
+
+
 function saveProduct() {
     var file1 = document.getElementById("image01").files;
     var file2 = document.getElementById("image02").files;
@@ -61,10 +63,10 @@ function loadProducts() {
     });
 }
 
-function showModel(image1,image2){
+function showModel(image1, image2) {
     $('#imagep').html("\
-<img src='../../res/"+image1+"' alt='image'>\n\
-<img src='../../res/"+image2+"' alt='image'>\n\
+<img src='../../res/" + image1 + "' alt='image'>\n\
+<img src='../../res/" + image2 + "' alt='image'>\n\
 ");
     $('#imageModel').modal('show');
 }

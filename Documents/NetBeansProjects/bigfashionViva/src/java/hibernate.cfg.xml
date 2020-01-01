@@ -7,6 +7,7 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/bigfashion?useSSL=false&amp;serverTimezone=UTC</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
+    
     <property name="hibernate.show_sql">true</property>
     <mapping class="dbmodels.Cart"/>
     <mapping class="dbmodels.CartItems"/>
